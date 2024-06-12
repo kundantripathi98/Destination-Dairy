@@ -1,5 +1,9 @@
 const Stats = () => {
-    return <h1>Destination Diary</h1>
+    return <footer className="stats">
+        <em>
+           💼 You have x items on your list, and you already packed x (x%)
+        </em>
+    </footer>
 }
 
 export default Stats;
