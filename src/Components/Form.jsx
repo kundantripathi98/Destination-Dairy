@@ -13,9 +13,10 @@ const Form = () => {
             quantity,
             package: false
         };
-        console.log(newItem);
+        // console.log(newItem);
 
         initialItems.push(newItem);
+        console.log(initialItems);
         setDescription("");
         setQuantity(1);
     }
