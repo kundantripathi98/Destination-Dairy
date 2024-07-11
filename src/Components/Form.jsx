@@ -1,14 +1,8 @@
 import { useState } from "react";
-import {initialItems} from '../Components/PackingList';
 
-const Form = () => {
+const Form = ({onAddItem}) => {
     const [description, setDescription] = useState("");
     const [quantity, setQuantity] = useState(1);
-    const [items, setItems] = useState([]);
-
-    const handleAddItem = (item)=>{
-        setItems(items => [...items, item]);
-    }
 
     const handleForm = (e)=>{
         e.preventDefault();
@@ -20,9 +14,9 @@ const Form = () => {
         };
         // console.log(newItem);
 
-        handleAddItem(newItem)
-        initialItems.push(newItem);
-        console.log(initialItems);
+        onAddItem(newItem)
+        // initialItems.push(newItem);
+        
         setDescription("");
         setQuantity(1);
     }
