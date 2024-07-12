@@ -6,7 +6,7 @@ export const initialItems = [
     // { id: 3, description: "Charger", quantity: 1, packed: true },
   ];
 
-const PackingList = ({items, toDeleteItem}) => {
+const PackingList = ({items, toDeleteItem, onToggleItems}) => {
     return <div className="list">
         <ul>
         {items.map((item)=>(

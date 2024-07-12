@@ -10,7 +10,7 @@ const Form = ({onAddItem}) => {
             id: Date.now(),
             description,
             quantity,
-            package: false
+            packed: false
         };
 
         onAddItem(newItem)

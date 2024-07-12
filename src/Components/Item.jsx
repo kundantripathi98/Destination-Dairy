@@ -1,8 +1,9 @@
 const Item = ({item, toDeleteItem}) => {
     return (
         <li>
-        <span style={item.packed ? {textDecoration: "line-through"} : {}}>{item.quantity} {item.description}</span>
-        <button onClick={()=>toDeleteItem(item.id)}>❌</button>
+            <input type="checkbox" value={item.packed}/>
+            <span style={item.packed ? {textDecoration: "line-through"} : {}}>{item.quantity} {item.description}</span>
+            <button onClick={()=>toDeleteItem(item.id)}>❌</button>
     </li>
     );
 }
