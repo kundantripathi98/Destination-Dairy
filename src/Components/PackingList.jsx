@@ -10,7 +10,7 @@ const PackingList = ({items, toDeleteItem, onToggleItems}) => {
     return <div className="list">
         <ul>
         {items.map((item)=>(
-            <Item item={item} toDeleteItem={toDeleteItem}/>
+            <Item item={item} toDeleteItem={toDeleteItem} onToggleItems={onToggleItems}/>
         ))}
         </ul>
     </div>
