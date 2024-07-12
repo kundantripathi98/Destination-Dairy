@@ -9,7 +9,9 @@ const App = () => {
   const [items, setItems] = useState([]);
 
 const handleAddItem = (item)=>{
-    setItems(items => [...items, item]);
+    if(item.description !== ""){
+      setItems(items => [...items, item]);
+    }
     console.log(items);
 }
 
