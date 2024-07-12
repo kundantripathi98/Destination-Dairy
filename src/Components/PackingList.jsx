@@ -6,11 +6,11 @@ export const initialItems = [
     // { id: 3, description: "Charger", quantity: 1, packed: true },
   ];
 
-const PackingList = ({items}) => {
+const PackingList = ({items, toDeleteItem}) => {
     return <div className="list">
         <ul>
         {items.map((item)=>(
-            <Item item={item} key={item.id}/>
+            <Item item={item} toDeleteItem={toDeleteItem}/>
         ))}
         </ul>
     </div>
