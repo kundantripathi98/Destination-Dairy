@@ -12,10 +12,8 @@ const Form = ({onAddItem}) => {
             quantity,
             package: false
         };
-        // console.log(newItem);
 
         onAddItem(newItem)
-        // initialItems.push(newItem);
         
         setDescription("");
         setQuantity(1);
