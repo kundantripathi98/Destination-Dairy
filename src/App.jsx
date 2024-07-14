@@ -32,5 +32,3 @@ const handleToggleItem = (id)=>{
     </div>
   );
 }
-
-
