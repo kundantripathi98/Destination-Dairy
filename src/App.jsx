@@ -5,7 +5,7 @@ import PackingList from "./Components/PackingList";
 import Stats from "./Components/Stats";
 import { useState } from "react";
 
-export const App = () => {
+const App = () => {
   const [items, setItems] = useState([]);
 
 const handleAddItem = (item)=>{
@@ -32,3 +32,5 @@ const handleToggleItem = (id)=>{
     </div>
   );
 }
+
+export default App;
