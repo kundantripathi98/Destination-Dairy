@@ -28,7 +28,7 @@ const handleToggleItem = (id)=>{
      <Logo/>
      <Form onAddItem={handleAddItem}/>
      <PackingList items={items} toDeleteItem={handleDelete} onToggleItems={handleToggleItem}/>
-     <Stats/>
+     <Stats items={items}/>
     </div>
   );
 }
