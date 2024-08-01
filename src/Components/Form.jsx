@@ -24,6 +24,7 @@ const Form = ({onAddItem}) => {
 
         <select name="" id="" value={quantity} onChange={(e)=>setQuantity(Number(e.target.value))}>
             {Array.from({length: 20}).map((item, index)=>(
+
                 <option value={index + 1} key={index}>{index + 1}</option>
             ))}
         </select>
