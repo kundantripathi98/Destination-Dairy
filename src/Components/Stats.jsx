@@ -1,4 +1,7 @@
 const Stats = ({items}) => {
+    if(!items.length){
+        return <p className="stats">Start adding some items to your packing list🚀</p>
+    }
     const numItems = items.length;
     const packedNum = items.filter((item)=>item.packed).length;
     const percent = Math.floor((packedNum / numItems) * 100);
