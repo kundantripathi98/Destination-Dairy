@@ -23,11 +23,17 @@ const handleToggleItem = (id)=>{
   setItems(items => items.map(item => item.id === id ? {...item, packed: !item.packed} : item));
 }
 
+const clearList = ()=>{
+  (items.length === 0) 
+  ? alert("Please add items first to clear list") 
+  : (window.confirm("Are you sure to delete all the items?") && setItems([]));
+}
+
   return (
     <div className="app">
      <Logo/>
      <Form onAddItem={handleAddItem}/>
-     <PackingList items={items} toDeleteItem={handleDelete} onToggleItems={handleToggleItem}/>
+     <PackingList items={items} toDeleteItem={handleDelete} toClearList={clearList} onToggleItems={handleToggleItem}/>
      <Stats items={items}/>
     </div>
   );
